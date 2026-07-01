@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join — The Enright Lab</title>
+  <meta name="description" content="Join the Enright research group at San Francisco State University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="main"></main>
+  <script src="images.js"></script>
+  <script src="layout.js"></script>
+  <script>
+    renderShell('join');
+    document.getElementById('main').innerHTML = `
+      ${pageHero('Interested in<br><em>joining our group?</em>', 'Motivated undergraduates and graduate students welcome', IMAGES.pageHero)}
+
+      <section class="intro intro-compact">
+        <div class="intro-grid">
+          <p class="intro-label reveal">Overview</p>
+          <div class="intro-body intro-body-sm reveal">
+            <p>Professor Enright is always interested in hearing from motivated undergraduates and potential graduate students. Please reach out to learn about current openings and opportunities.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="section-header reveal">
+          <span class="section-number">01</span>
+          <h2>Frequently asked<br><em>questions</em></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal" open>
+            <summary><span class="faq-index">01</span><span class="faq-question">What is it like to "do research" in the Enright group?</span><span class="faq-icon"></span></summary>
+            <div class="faq-answer">
+              <p>Everyone in the group has a unique, authentic research project with the goal of solving real-world challenges. Working on a project includes running experiments in the lab, using instrumentation to characterize your experiments, analyzing your data, reading scientific articles, and presenting your work.</p>
+              <p>At first, you will work closely with other group members as you gain skills and knowledge in our supportive and collaborative team. As you become more experienced, you will have opportunities to become more independent and to design experiments and even new projects on your own.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span class="faq-index">02</span><span class="faq-question">Are there any requirements before joining?</span><span class="faq-icon"></span></summary>
+            <div class="faq-answer">
+              <p>The minimum requirement is to have completed at least one semester of university-level chemistry (Chem 115 or equivalent, AP Chemistry, and IB Chemistry all count) or be currently enrolled in Chem 115 with plans to take Chem 215 next semester. You should be available to do research for at least two semesters after you join.</p>
+              <p>The only other requirement is that you are motivated to learn and grow as a scientist. You don't need to understand our research before you join — you are qualified as long as you are interested in becoming a scientist and excited about nanomaterials for sustainable energy.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span class="faq-index">03</span><span class="faq-question">What are the expectations?</span><span class="faq-icon"></span></summary>
+            <div class="faq-answer">
+              <p>When you first join, you will need at least 3 hours of lab per week. After that, plan to commit to 9–10 hours/week each semester. By researching 9–10 hours/week, you are eligible to earn 3 credits of <strong>CHEM 699</strong> (undergraduates) or <strong>CHEM 898</strong> (graduate students) each semester.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span class="faq-index">04</span><span class="faq-question">Can I join mid-semester?</span><span class="faq-icon"></span></summary>
+            <div class="faq-answer">
+              <p>Absolutely. You can use a partial semester to come to the lab for about 3 hours/week to learn about our projects, then join full-time (9–10 hours/week) the following semester. Don't wait — apply as a first- or second-year student if you're interested.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span class="faq-index">05</span><span class="faq-question">Do I need my own supplies?</span><span class="faq-icon"></span></summary>
+            <div class="faq-answer">
+              <p>No — everything you need will be provided, including PPE such as lab coats and glasses. A laptop helps but is not required. You must wear closed-toed shoes and long pants for safety.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="apply" id="apply">
+        <div class="apply-grid">
+          <div class="apply-card reveal">
+            <span class="section-number">02</span>
+            <h2>Ready to<br><em>apply?</em></h2>
+            <p>Complete the Google form application — it takes less than 10 minutes.</p>
+            <a href="${APPLY_FORM}" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">Complete application <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <div class="apply-card apply-card-alt reveal">
+            <span class="section-number">03</span>
+            <h2>High school<br><em>journal club</em></h2>
+            <p>Professor Enright hosts a monthly journal club for high school students interested in reading peer-reviewed journals. Mark your interest in the journal club in the last question of the application.</p>
+            <a href="${APPLY_FORM}" class="btn btn-ghost btn-large" target="_blank" rel="noopener noreferrer">Journal club application <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats reveal">
+        <div class="stat"><span class="stat-value">3 hrs</span><span class="stat-label">Minimum weekly commitment when starting</span></div>
+        <div class="stat"><span class="stat-value">9–10 hrs</span><span class="stat-label">Full-time research per week</span></div>
+        <div class="stat"><span class="stat-value">3 credits</span><span class="stat-label">CHEM 699 or CHEM 898 per semester</span></div>
+        <div class="stat"><span class="stat-value">2+</span><span class="stat-label">Semesters expected after joining</span></div>
+      </section>`;
+
+    initReveal();
+    document.querySelectorAll('.faq-item').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (!item.open) return;
+        document.querySelectorAll('.faq-item[open]').forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — The Enright Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="main"></main>
+  <script src="images.js"></script>
+  <script src="layout.js"></script>
+  <script>
+    renderShell('research');
+    document.getElementById('main').innerHTML = `
+      ${pageHero('Current Research<br><em>Directions</em>', 'Colloidal nanomaterials for sustainable energy', IMAGES.pageHero)}
+      <section class="research-list">
+        <article class="research-item reveal">
+          <div class="research-item-images">
+            <img src="${IMAGES.research.photocatalysis}" alt="Photocatalysis research" loading="lazy">
+          </div>
+          <div class="research-item-body">
+            <span class="section-number">01</span>
+            <h2>Photocatalysis</h2>
+            <p>A critical challenge in solar fuels and photocatalysis technologies is charge transfer management. While quantum dots have shown to be useful for photocatalytic hydrogen evolution and other related solar-to-fuel applications, these systems suffer from low quantum efficiencies and turnover numbers due to rapid radiative recombination on the nanosecond time scale and slow photocatalyst regeneration.</p>
+            <p>Our work explores the synthesis and implementation of new heterostructure nanomaterials optimized for photocatalysis to reduce radiative recombination to improve solar to fuel efficiency with more rapid catalyst turnover rates.</p>
+          </div>
+        </article>
+        <article class="research-item research-item-reverse reveal">
+          <div class="research-item-images research-item-images-duo">
+            <img src="${IMAGES.research.lsc1}" alt="CuAlS2-ZnS quantum dots" loading="lazy">
+            <img src="${IMAGES.research.lsc2}" alt="Luminescent solar concentrator lab work" loading="lazy">
+          </div>
+          <div class="research-item-body">
+            <span class="section-number">02</span>
+            <h2>Luminescent Solar Concentrators</h2>
+            <p>Luminescent solar concentrators (LSCs) are luminophore embedded waveguides capable of collecting sunlight across a wide area and concentrating it onto smaller cells for energy conversion. Our lab is developing strategies to achieve high performance concentrators using near infrared emissive nanoparticles.</p>
+            <p>Our goal is to create gray-scale LSCs to serve as power generating windows — enabling off-grid power generation for buildings.</p>
+          </div>
+        </article>
+        <article class="research-item reveal">
+          <div class="research-item-body">
+            <span class="section-number">03</span>
+            <h2>Selective Carbon Dioxide Reduction</h2>
+            <p>A major goal of CO₂ electroreduction is the high yield of energy-dense and industrially useful C2+ products, such as ethylene and ethanol using renewable electricity. Although high yields of CO₂ reduction to multiple C1 products have been achieved, high selectivity of C2+ products remains a challenge.</p>
+            <p>We seek to tune the catalytic activity and selectivity of reduction microenvironments on copper by manipulating nano- and microscale structural attributes of ordered catalytic layers.</p>
+          </div>
+        </article>
+        <article class="research-item research-item-reverse reveal">
+          <div class="research-item-images research-item-images-duo">
+            <img src="${IMAGES.research.mof1}" alt="MOF research" loading="lazy">
+            <img src="${IMAGES.research.mof2}" alt="MOF laboratory work" loading="lazy">
+          </div>
+          <div class="research-item-body">
+            <span class="section-number">04</span>
+            <h2>MOFs for Carbon Dioxide Capture <em class="tag-previous">previous work</em></h2>
+            <p>Metal-organic frameworks (MOFs) have high surface area and porosity and are emerging materials for environmental applications, including carbon capture and storage. This project is done in conjunction with developing teaching laboratory experiments to demonstrate CO₂ capture in the context of climate justice.</p>
+          </div>
+        </article>
+        <article class="research-item reveal">
+          <div class="research-item-body">
+            <span class="section-number">05</span>
+            <h2>Environmental Fate of Selenium Nanoparticles <em class="tag-previous">previous work</em></h2>
+            <p>Selenium nanoparticles are common in nature and formed naturally by yeast, bacteria, and fungi. The Enright group's contribution is to synthesize monodisperse Se NPs to develop characterization tools for tracking Se NP behavior in the environment. These same Se NPs are also under development as antibacterial agents against antibiotic-resistant bacteria.</p>
+          </div>
+        </article>
+      </section>
+      <section class="cta-band reveal">
+        <p>Explore our published work</p>
+        <a href="publications.html" class="btn btn-primary">View publications <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </section>`;
+    initReveal();
+  </script>
+</body>
+</html>

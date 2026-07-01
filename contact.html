@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — The Enright Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="main"></main>
+  <script src="images.js"></script>
+  <script src="layout.js"></script>
+  <script>
+    renderShell('contact');
+    document.getElementById('main').innerHTML = `
+      <section class="contact-hero reveal">
+        <img src="${IMAGES.contactPanorama}" alt="San Francisco panorama" class="contact-hero-img" loading="eager">
+        <div class="contact-hero-overlay"></div>
+      </section>
+      <section class="contact-page">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <span class="section-number">01</span>
+            <h1>Contact<br><em>Information</em></h1>
+            <p>Professor Enright is always interested in hearing from motivated undergraduates and potential graduate students. Please reach out to learn about current openings and opportunities.</p>
+            <dl class="contact-details">
+              <div><dt>Lab Location</dt><dd>Science and Engineering Innovation Center (SEIC) 304</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:enrightm@sfsu.edu">enrightm@sfsu.edu</a></dd></div>
+              <div><dt>Mailing Address</dt><dd>Science and Engineering Innovation Center (SEIC) 304</dd></div>
+            </dl>
+          </div>
+          <div class="contact-form-wrap reveal">
+            <span class="section-number">02</span>
+            <h2>Send a<br><em>message</em></h2>
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <label><span>First Name</span><input type="text" name="firstName" required></label>
+                <label><span>Last Name</span><input type="text" name="lastName" required></label>
+              </div>
+              <label><span>Email</span><input type="email" name="email" required></label>
+              <label><span>Phone</span><input type="tel" name="phone"></label>
+              <label><span>Subject</span><input type="text" name="subject" required></label>
+              <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <p class="form-success" hidden>Thanks for submitting! We'll be in touch soon.</p>
+            </form>
+          </div>
+        </div>
+      </section>`;
+    initReveal();
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const body = [
+        `Name: ${f.firstName.value} ${f.lastName.value}`,
+        `Email: ${f.email.value}`,
+        `Phone: ${f.phone.value}`,
+        `Subject: ${f.subject.value}`,
+        '',
+        f.message.value,
+      ].join('\n');
+      window.location.href = `mailto:enrightm@sfsu.edu?subject=${encodeURIComponent(f.subject.value)}&body=${encodeURIComponent(body)}`;
+      f.querySelector('.form-success').hidden = false;
+    });
+  </script>
+</body>
+</html>

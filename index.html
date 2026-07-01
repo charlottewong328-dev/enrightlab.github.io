@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enright Laboratory — SFSU</title>
+  <meta name="description" content="The Enright Lab at San Francisco State University — colloidal nanomaterials for sustainable energy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero hero-home">
+      <div class="hero-content">
+        <p class="eyebrow reveal">San Francisco State University</p>
+        <h1 class="hero-title reveal">
+          The Enright<br><em>Laboratory</em>
+        </h1>
+        <p class="hero-lead reveal">
+          Department of Chemistry and Biochemistry — developing colloidal nanomaterial
+          systems for sustainable energy solutions through photocatalysis and luminescent solar concentrators.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="research.html" class="btn btn-primary">Our research <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="join.html" class="btn btn-ghost">Join the lab</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-image">
+          <img id="home-hero-img" src="" alt="The Enright Laboratory at San Francisco State University" loading="eager">
+          <div class="hero-image-caption"><span>Nanomaterials</span><span>Sustainable Energy</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Photocatalysis · Luminescent Solar Concentrators · CO₂ Reduction · Quantum Dots · SFSU Chemistry ·</span>
+        <span>Photocatalysis · Luminescent Solar Concentrators · CO₂ Reduction · Quantum Dots · SFSU Chemistry ·</span>
+      </div>
+    </div>
+
+    <section class="intro">
+      <div class="intro-grid">
+        <p class="intro-label reveal">About</p>
+        <div class="intro-body reveal">
+          <p>
+            The Enright lab seeks to develop a spectroscopic understanding of colloidal
+            nanomaterial systems for sustainable energy solutions. Our group uses nanomaterials
+            to convert and manipulate sunlight.
+          </p>
+          <p>
+            We explore photocatalysis for renewable fuel generation and luminescent solar
+            concentrators for power-generating windows — semi-transparent, tinted panels that
+            convert light into electricity for buildings.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-cards">
+      <a href="research.html" class="home-card reveal">
+        <span class="home-card-num">01</span>
+        <h2>Research</h2>
+        <p>Photocatalysis, luminescent solar concentrators, and selective CO₂ reduction.</p>
+        <span class="home-card-link">Explore →</span>
+      </a>
+      <a href="members.html" class="home-card reveal">
+        <span class="home-card-num">02</span>
+        <h2>Members</h2>
+        <p>Meet our graduate and undergraduate researchers at SFSU and beyond.</p>
+        <span class="home-card-link">Meet the team →</span>
+      </a>
+      <a href="join.html" class="home-card reveal">
+        <span class="home-card-num">03</span>
+        <h2>Join</h2>
+        <p>Motivated undergraduates and graduate students are always welcome to apply.</p>
+        <span class="home-card-link">Apply now →</span>
+      </a>
+    </section>
+  </main>
+  <script src="images.js"></script>
+  <script src="layout.js"></script>
+  <script>renderShell('home'); document.getElementById('home-hero-img').src = IMAGES.homeHero;</script>
+</body>
+</html>

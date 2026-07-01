@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "status": "failed_fetch",
+    "error": "Cursor sandbox network proxy returns HTTP 403 for michaelenright.wixsite.com and static.wixstatic.com (DNS blocked for Node; curl via proxy denied).",
+    "images_dir": "/Users/charlottewong/enright-lab-join/images",
+    "scrape_script": "/Users/charlottewong/enright-lab-join/scrape/extract_and_download.py",
+    "run_locally": "cd /Users/charlottewong/enright-lab-join && ./scrape_all.sh"
+  },
+  "image_mapping": {},
+  "by_page": {
+    "home": [],
+    "research": [],
+    "members": [],
+    "publications": [],
+    "join": [],
+    "contact": []
+  },
+  "member_name_to_photo": {},
+  "stats": {
+    "unique_images": 0,
+    "downloaded": 0
+  }
+}
